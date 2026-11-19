@@ -6,7 +6,7 @@
 
 > **Start here — sign up with my link:** https://make.fun/r/vh3a7rbz
 >
-> My referral code is `vh3a7rbz`. Use the link above, or paste the code when you sign up, and you are in.
+> My referral code is `vh3a7rbz`. Open the link above, or paste the code when you sign up, and you are in.
 
 This page is a plain-English walkthrough for someone who has never used make.fun. By the end of it you will know what the site is, what you need before you touch anything, and how to go from an empty account to a submitted entry — and, if it places, to real money in your own wallet.
 
@@ -44,6 +44,8 @@ You do not work for make.fun and nobody hires you. You pick a bounty, build an e
 
 The twist that makes the whole thing work: you build with an AI coding agent. Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, opencode, Cline, Aider — any of the usual ones, and dozens more. The agent writes the code while you decide what to build, check its work, and choose when to submit. Knowing how to code helps, because you can judge what the agent produced, but the agent is the one doing the heavy lifting.
 
+How entries are scored depends on the bounty. A coding bounty is usually graded by running every entry the same way in a sandbox and comparing the results; a referral bounty like this one is scored on verified human signups your link brought in. Either way, the scoring rules are published on the bounty page before you start — read them, because they tell you where the points actually are.
+
 ## The journey, in one paragraph
 
 You make a free account, link GitHub and a Solana wallet, and pick a bounty whose task looks doable before its deadline. You download that bounty's kit, which holds its rules and a small command-line tool. You open a fresh agent session in a new public repo and build. When the entry is ready you bundle your agent's session transcripts, run the site's own checks on your machine, and submit the repo link, the commit, and the bundle. The site checks the entry, scores it by the rules on the bounty page, and publishes results. If you placed, you claim USDC to your wallet. That is the whole loop — the rest of this guide is just each step slowed down.
@@ -77,7 +79,7 @@ It prints something like `Open <link> and approve code XXXX-XXXX`. Open that lin
 The front page groups bounties into Trending, New, and Ending soon, across categories like Code, Games, Trading, Forecasting, and Growth. Every card shows the reward. Click into one and read the whole page before you write a line of code. Look for:
 
 - **The task, in full.** The one-line summary, then the detailed description. Make sure you understand what "done" looks like.
-- **The rules.** What the entry must contain, how it is scored, and how ties are broken. Scoring is published per bounty — read it, because it tells you where the points actually are.
+- **The rules.** What the entry must contain, how it is scored, and how ties are broken. An exact tie usually goes to the earlier entry, so do not leave everything to the last hour.
 - **The rewards.** What each paid place gets, not just the headline total.
 - **The phases.** When entries close and when final results are published.
 
@@ -112,6 +114,8 @@ That runs your entry against the kit's practice data in the same Docker sandbox 
 5. **Write the README the bounty asks for.** Some bounties, including this one, ask for a specific README — with make.fun's badges for your repository filled in. Commit it with everything else.
 
 One tip that saves hours: tell your agent to read [make.fun/skill.md](https://make.fun/skill.md) first. It is the entire entry loop written for agents — every command and every check in one place.
+
+If you have one hour, spend it like this: 10 minutes reading the bounty page and `RULES.txt`, 10 minutes on the account, kit, and repo setup above, 30 minutes building with your agent, and 10 minutes bundling, checking, and submitting. A rough entry submitted early beats a polished one that misses the deadline — you can keep improving and resubmitting after that first version is in.
 
 ## Step 5 — Bundle it and send it in
 
@@ -178,6 +182,8 @@ Every account gets its own referral link, in the form `https://make.fun/r/<code>
 
 How it pays: you earn USDC rewards when people sign up through your link and take part, plus a share of what they win for a while after they sign up. make.fun pays that share on top, so the new person's own reward is not reduced. Every reward is reviewed for at least a day before you can claim it, and only real new accounts that actually take part count — your own account, bots, and idle signups do not.
 
+One detail that catches people out: a referral sticks to the first link a visitor's browser saw, and that first touch wins for 60 days — a later link does not replace it. So share your link early, in places where real newcomers will actually see it, rather than chasing people who have already clicked someone else's.
+
 If this guide got you started, the same deal applies here: sign up through https://make.fun/r/vh3a7rbz — code `vh3a7rbz` — and it helps the person who wrote it, at no cost to you.
 
 ## Five mistakes first-timers make
@@ -209,6 +215,10 @@ Claude Code, Codex, Cursor, GitHub Copilot, Gemini CLI, Qwen Code, opencode, Cli
 **What happens to my transcripts?**
 
 make.fun reads them to check that your own agent built the entry. The kit strips credentials, email addresses, and home paths before upload, and `bundle --redact "<text>"` removes any other personal detail you name.
+
+**Can a team enter together?**
+
+One account per person. A team enters under one account and splits any prize itself.
 
 **What if my entry is rejected?**
 
